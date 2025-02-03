@@ -91,9 +91,9 @@ The output for me that confirms things are configured is this line:
 ```
 
 ## 3.0 Add The Hooks
-Now, we can add our Qemu hooks to bind and unbind the GPU automatically. 
-Qemu has a powerful hook system in place that allows us to do all sorts of things
-including automatically controlling hardware for us.
+Now, we can add our QEMU hooks to bind and unbind the GPU automatically. 
+QEMU has a powerful hook system in place that allows us to do all sorts of 
+things, including automatically controlling hardware.
 
 The easiest thing to do is check out the `qemu_hook_skeleton` directory and drop
 it into `/etc/libvirt/hooks/`.
@@ -125,7 +125,7 @@ VMs too
 To enable the binding and unbinding of your GPU, you must first determine its
 iommu group.
 ```
-find /sys/kernel/iommu_groups/ -type l -exec basename {} \; | xargs -I % lspci -nns %
+find /sys/kernel/iommu_groups/ -type l -exec basename {} \;  | sort | xargs -I % lspci -nns %
 ```
 
 In my case, it was these lines that were important:
