@@ -8,6 +8,11 @@ already.
 My intent is to keep this up-to-date so I have something to reference for my own
 peace of mind.
 
+I also built a Node CLI tool that automates steps 4-6 called [qemu-hook-manager](https://github.com/slackdaystudio/qemu-hook-manager).  This is an alpha quality tool that you may use if you like to walk you through a 
+guided passthrough configuration setup process.  
+
+You can also grab the [qemu-hook-manager](https://www.npmjs.com/package/@sentry0/qemu-hook-manager) tool on NPM by running `npm i -g @sentry0/qemu-hook-manager`.
+
 ## 1.0 Required Software
 I'm running an Ubuntu 24.10-based system.  I needed the following;
 ```
